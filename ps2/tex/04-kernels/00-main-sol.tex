@@ -1,0 +1,17 @@
+\begin{answer}
+	$ K^i $ denotes the square matrix for kernel $ K_i $.
+\begin{enumerate}
+	\item Yes. Easy to check that $ K $ is symmetric and since\[ z^TKz = z^TK^1z + z^TK^2z \geq 0\] so $ K $ is PSD.
+	\item No. Let $ K^1 = 0_{(n)}$ so that $ K = -K^2 $ which is NSD.
+	\item Yes. Easy to get that $ aK^1 $ is PSD.
+	\item No. Since $ -aK^1 $ is NSD.
+	\item Yes. This is just Schur Product Theorem: the Hadamard product of two PSD matrices is also a PSD matrix.
+	proof: let $ K^1 = \sum_{i=1}^{m} \nu_im_im_i^T,\, K^2 = \sum_{j=1}^{m} \mu_jm_jm_j^T$, so \[ K^1\odot K^2 = \sum_{i,j=1}^{m} \nu_i\mu_j m_im_i^T\odot n_jn_j^T = \sum_{i,j=1}{m}\nu_i\mu_j(m_i\odot n_j)(m_i\odot n_j)^T \]
+	easy to check that $ \mu_j\nu_i $ is none-negative. so that $ K $ is PSD.
+	\item Yes. since this is just the special case of $\phi(x) $ whose image dimension is just 1.
+	\item Yes. Let $ \phi^3 $ denotes the feature mapping of $ K_3 $, define $ \phi':\mathbb{R}^n\mapsto \mathbb{R}^d, x \to \phi^3(\phi(x)) $, then
+	\[ K_3(\phi(x),\phi(z)) = \phi_3^T(\phi(x))\phi_3^T(\phi(x)) = (\phi'(x))^T\phi'(x)\]
+	so that $ K_3 $ is kernel.
+	\item by (e) easy to get that $ K^k \text{ is kernel}, \forall k \in \mathbb{N} $. by (a) and (c) easy to check the linear combination of any kernel set is still kernel. since any polynomial is linear combination of set $ \{1,x^1,x^2,\ldots,x^n,\ldots\}$. combine (a),(c) and (e) we can get $ K $ is kernel.
+\end{enumerate}
+\end{answer}

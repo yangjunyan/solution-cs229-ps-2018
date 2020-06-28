@@ -1,0 +1,9 @@
+\begin{answer}
+Easy to check that
+\begin{align*}
+ \ell_{\text{semi-sup}}(\theta^{(t+1)}) =& -H(Q^{(t)}, p_{z|x,\theta^{t+1}}) + H(Q^{(t)}) + \ell_{\text{semi-sup}}(\theta^{(t+1)}) \\
+ = &-\KL(Q^{(t)}\|p_{z|x,\theta^{(t+1)}}) + \ell_{\text{semi-sup}}(\theta^{(t+1)})\\
+ \geq &-\KL(Q^{(t)}\|p_{z|x,\theta^{(t)}}) + \ell_{\text{semi-sup}}(\theta^{(t)})\\
+ = &\ell_{\text{semi-sup}}(\theta^{(t)})
+\end{align*}
+ \end{answer}

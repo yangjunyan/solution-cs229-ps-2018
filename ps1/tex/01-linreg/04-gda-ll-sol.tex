@@ -1,0 +1,23 @@
+\begin{answer}
+We have
+  \begin{align*}
+	\ell(\phi, \mu_{0}, \mu_1, \Sigma) 
+	=&\sum_{i=1}^m\left(-\frac{1}{2}(x^{(i)}-\mu_{y{(i)}})^T \Sigma^{-1} (x^{(i)}-\mu_{y^{(i)}})+\log(p(y^{(i)}))\right)-m\log(|\Sigma|^{1/2})+\mbox{const.}\\
+	=&\sum_{i=1}^my^{(i)} \left[ \left(-\frac{1}{2}(x^{(i)}-\mu_1)^T \Sigma^{-1} (x^{(i)}-\mu_1)+\log(\phi)\right)\right.\\
+	+& \left.(1-y^{(i)})\left(-\frac{1}{2}(x^{(i)}-\mu_1)^T \Sigma^{-1} (x^{(i)}-\mu_1)+\log(1-\phi)\right) \right]-m\log(|\Sigma|^{1/2})+\mbox{const.}
+	\end{align*}	
+	set derivatives to zeros:
+	\begin{align*}
+	\frac{\partial \ell}{\partial \phi}
+	&= \sum_{i=1}^m\left( y^{(i)}\frac{1}{\phi}-(1-y^{(i)})\frac{1}{1-\phi}\right) =
+	\frac{\sum_{i=1}^m(y^{(i)}-\phi)}{\phi(1-\phi)} = 0\\
+	\frac{\partial \ell}{\partial \mu_{0}}
+	&=\sum_{i=1}^{m}(1-y^{(i)})\Sigma^{-1}(\mu_{0}-x^{(i)})=0\\
+		\frac{\partial \ell}{\partial \mu_{1}}
+	&=\sum_{i=1}^{m}y^{(i)}\Sigma^{-1}(\mu_{0}-x^{(i)})=0\\
+	\frac{\partial \ell}{\partial \Sigma^{-1}}
+	&=\frac{1}{2}\frac{m}{|\Sigma^{-1}|}|\Sigma^{-1}|\Sigma-\frac{1}{2}\sum_{i=1}^{m}(x^{(i)}-\mu_{y^{(i)}})(x^{(i)}-\mu_{y^{(i)}})^T=0
+	\end{align*}
+	From these we can get the estimations.
+\end{answer}
+

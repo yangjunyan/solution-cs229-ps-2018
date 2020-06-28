@@ -1,0 +1,9 @@
+\begin{answer}
+Denote sigmoid function as $ \sigma(x) $, we have $ \sigma'(x) = \sigma(x) (1-\sigma(x)) $ by the chain rule we have
+\begin{align*}
+\frac{\partial L}{\partial `w^{(i)}_{12}} =& 
+\frac{\partial L}{\partial \sigma(o^{(i)})}\frac{\partial \sigma(o^{(i)})}{\partial o^{(i)}}\frac{\partial o^{(i)}}{\partial \sigma(h_{2}^{(i)})}\frac{\partial \sigma(h_{2}^{(i)})}{\partial h_{2}^{(i)}}\frac{\partial h_{2}^{(i)}}{\partial \omega_{1,2}^{[1]}}\\
+= &\sum_{i = 1}^{m}\frac{2}{m} (\sigma(o^{(i)}) - y^{(i)})o^{(i)}(1- o^{(i)})\omega^{[2]}_2h_{2}^{(i)}(1-h_{2}^{(i)})x^{(i)}_1
+\end{align*}
+where \[ o^{(i)} = \sum_{j = 1}^{3}\omega_j^{[2]}\sigma(h_{j}^{(i)}), h_{j}^{(i)} = \omega_{1,j}x_1^{(i)}+\omega_{2,j}x_2^{(i)}} \]
+ \end{answer}

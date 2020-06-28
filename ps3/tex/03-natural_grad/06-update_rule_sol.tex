@@ -1,0 +1,12 @@
+\begin{answer}
+the direction of natural gradient is $ \mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta) $.
+So update rule is given by:
+\[ \theta := \theta + \alpha\mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta) \]
+For Newton's method:
+\[ \theta := -H(\theta)^{-1}\nabla_{\theta'}l(\theta) + \theta \]
+and \[ -H(\theta) = \mathbb{E}_{y\sim p(y;\theta)}[-\nabla^2_{\theta'}l(\theta)] = \mathcal{I}(\theta) \]
+so that
+\[ \theta := \mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta) + \theta \]
+So direction is same.
+
+\end{answer}

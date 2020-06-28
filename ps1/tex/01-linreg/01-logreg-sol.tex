@@ -1,0 +1,17 @@
+\begin{answer}
+	Note that
+	\begin{align*}
+		\frac{\partial J}{\partial \theta_j} =& -\frac{1}{m}\sum_{i=1}^{m}\left( y^{(i)}\frac{1}{g(\theta^Tx^{(i)})}g'(\theta^Tx^{(i)})x^{(i)}_j-(1-y^{(i)})\frac{1}{1-g(\theta^Tx^{(i)})}g'(\theta^Tx^{(i)})x^{(i)}_j\right) \\
+		=&-\frac{1}{m}\sum_{i=1}^{m}\left( y^{(i)}(1-g(\theta^Tx^{(i)}))x^{(i)}_j-(1-y^{(i)})g(\theta^Tx^{(i)})x^{(i)}_j\right)\\
+		=&-\frac{1}{m}\sum_{i=1}^{m}\left( y^{(i)}-g(\theta^Tx^{(i)})\right)x^{(i)}_j\\
+		=&-\frac{1}{m}\sum_{i=1}^{m}\left( y^{(i)}-h_{\theta}(x^{(i)})\right)x^{(i)}_j\\
+		\frac{\partial^2 J}{\partial \theta_j\partial \theta_k} 
+		=&\frac{1}{m}\sum_{i=1}^{m}g'(\theta^Tx^{(i)})x^{(i)}_kx^{(i)}_j\\
+		\end{align*}
+		Thus
+		\begin{align*} z^THz=&\sum_{k=1}^{n}\sum_{j=1}^{n}\frac{1}{m}\sum_{i=1}^{m}g'(\theta^Tx^{(i)})x^{(i)}_kx^{(i)}_jz_jz_k\\
+	=&\frac{1}{m}\sum_{i=1}^{m}g'(\theta^Tx^{(i)})\sum_{k=1}^{n}\sum_{j=1}^{n}x^{(i)}_kx^{(i)}_jz_jz_k\\
+	&\frac{1}{m}\sum_{i=1}^{m}g'(\theta^Tx^{(i)})(\sum_{k=1}^{n}x^{(i)}_kz_k)^2\geq 0
+	\end{align*}
+
+\end{answer}

@@ -1,0 +1,29 @@
+\begin{answer}
+    \begin{enumerate}
+    	\item
+    	    	Obviously,
+\begin{align*}
+J(\theta) =& \frac{1}{2} 	\begin{bmatrix}
+\theta^Tx^{(1)}-y^{(1)}, & \cdots, & \theta^Tx^{(m)}-y^{(m)}
+\end{bmatrix} \begin{bmatrix}
+w^{(1)}& & \\
+& \ddots &\\
+& & w^{(m)}
+\end{bmatrix}\begin{bmatrix}
+\theta^Tx^{(1)}-y^{(1)}\\
+\vdots\\
+\theta^Tx^{(m)}-y^{(m)}
+\end{bmatrix}\\
+= &(\theta^TX^T-y^T)W(X\theta -y) \qquad \quad(\mbox{with}\  W = \frac{1}{2}
+\mbox{diag}(w^{(1)},...,w^{(m)})\ )\\
+= &(X\theta-y)^TW(X\theta-y)
+\end{align*}
+\item
+\[ \frac{\partial J}{\partial \theta}=\frac{\partial }{\partial \theta}(\theta^TX^TWX\theta-2\theta^TX^TWy+y^TWy)=2X^TWX\theta-2X^TWy \]
+so if we set $ w^{(i)}=2,\frac{\partial J}{\partial \theta}=0 $ then $ W=\frac{1}{2}I_{(m)}$ and $ \theta=(X^TX)^{-1}X^T{y}. $
+\item
+\[ p(y|X;\theta) = \prod_{i=1}^{m}p(y^{(i)}|x(^{i});\theta) = (2\pi)^{(-m/2)}(\prod_{i=1}^{m}\sigma^{(i)})^{-1}\exp\left( -\sum_{i=1}^{m}\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2(\sigma^{(i)})^2}\right)  \]
+let $ w^{(i)} = \frac{1}{(\sigma^{(i)})^2}  $ and use the result in ii. to solve the regression problem.
+    \end{enumerate}
+
+\end{answer}

@@ -1,0 +1,16 @@
+\begin{answer}
+$g'(x) = \frac{1}{\sqrt{(2\pi)^{}}}\exp \left(-\frac{1}{2}(x)^2\right)$. 
+Then
+\begin{align*}
+\frac{\partial \ell}{\partial W} =& \sum_{i=1}^m\left((W^T)^{-1} - \frac{\partial }{\partial W}\sum_{j=1}^n \frac{(w_j^Tx^{(i)})^2}{2}\right)\\
+= &m(W^T)^{-1} - \frac{\partial }{\partial W}\sum_{i=1}^m\sum_{j=1}^n \frac{x^{(i)^T}W_jW_j^Tx^{(i)}}{2}\\
+= &m(W^T)^{-1} - \frac{\partial }{\partial W}\sum_{i=1}^m \frac{x^{(i)^T}WW^Tx^{(i)}}{2}\\
+= &m(W^T)^{-1} - \sum_{i=1}^m x^{(i)^T}x^{(i)}W\\
+= &m(W^T)^{-1} - XX^TW\\
+= &0
+\end{align*}
+which is equivalent to \[WW^T = \frac{XX^T}{m} \]
+If $ R^TR = RR^T = I $ we can easily check that for $ W':=WR $, 
+\[W'W'^T = WRR^TW^T = WW^T = \frac{XX^T}{m} \]
+So there is no way to tell which is the solution.
+\end{answer}

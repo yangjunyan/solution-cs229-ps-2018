@@ -1,0 +1,12 @@
+\begin{answer}
+    Note that
+    $$
+    \begin{aligned}
+        D_{KL}(\hat P\|P_\theta) &=  \sum_{x\in\cal X} \hat P(x)\log \frac{\hat P(x)}{P_\theta(x)}\\
+        &= \sum_{x\in\cal X}\hat P(x)\log\hat P(x) - \sum_{x\in\cal X}\hat P(x)\log P_\theta(x)\\
+    \end{aligned}
+    $$
+    For fixed data, $ \hat{P}(x) $ is constant with respect to $ \theta $.
+
+    So minimizing this is just maximizing the log likelihood. 
+\end{answer}

@@ -1,0 +1,14 @@
+\begin{answer}
+	by
+\begin{equation*}
+p(y|x,\theta) = \frac{1}{\sqrt{(2\pi\sigma^2)^{m}}}\exp \left(-\frac{1}{2\sigma^2}(y-X\theta)^T(y-X\theta)\right)
+\end{equation*}
+we have
+\begin{align*}
+\theta_{\text{MAP}} =&\operatorname*{argmin}_{\theta}\left(\frac{1}{2\sigma^2}(y-X\theta)^T(y-X\theta)+\frac{1}{\eta^2}\theta^T\theta\right)\\
+= &\operatorname*{argmin}_{\theta}\left((y-X\theta)^T(y-X\theta)+\frac{\sigma^2}{\eta^2}\theta^T\theta\right)\\
+= &\operatorname*{argmin}_{\theta}\left( \frac{-2\theta^TX^Ty+\theta^TX^TX\theta}{2}+\frac{\sigma^2}{\eta^2}\theta^T\theta\right) 
+\end{align*}
+set the gradient to zero we have
+\[ 0 = -X^Ty+X^TX\theta+\frac{\sigma^2}{\eta^2}\theta \Leftrightarrow \theta = (X^TX+\frac{\sigma^2}{\eta^2}I_{n})^{-1}X^Ty\]
+\end{answer}

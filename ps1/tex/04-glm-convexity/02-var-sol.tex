@@ -1,0 +1,12 @@
+\begin{answer}
+since $ \int b(y)\exp(\eta y -a(\eta))dy =1$
+we have
+\begin{align*}
+	0 = &\frac{\partial }{\partial \eta^2}\int b(y)\exp(\eta y -a(\eta))dy \\
+	  = &\int \frac{\partial }{\partial \eta}\left( b(y)\exp(\eta y -a(\eta))(y-a'(\eta))\right) dy \\
+	  = &\int \left( b(y)\exp(\eta y -a(\eta))(y-a'(\eta))^2-b(y)\exp(\eta y -a(\eta))a''(\eta)\right) dy\\
+	  = &\int \left( b(y)\exp(\eta y -a(\eta))(y-\mathbb{E}[y;\eta])^2dy-a''(\eta)\right) \\
+\end{align*}
+which implies
+\[ \mbox{Var}(Y;\eta)=a''(\eta) \]
+\end{answer}

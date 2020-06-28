@@ -1,0 +1,11 @@
+\begin{answer}
+note that$ p(\theta)=p(\theta|x) $, we have
+\begin{align*}
+\operatorname*{argmax}_{\theta}p(y|x,\theta)p(\theta)
+& = \operatorname*{argmax}_{\theta}p(y|x,\theta)p(\theta|x)\\
+= &\operatorname*{argmax}_{\theta}p(y,\theta|x)\\
+= &\operatorname*{argmax}_{\theta}p(\theta|x,y)p(y|x)\\
+= &\operatorname*{argmax}_{\theta}p(\theta|x,y)\\
+= &\theta_{\text{MAP}}
+\end{align*}
+\end{answer}

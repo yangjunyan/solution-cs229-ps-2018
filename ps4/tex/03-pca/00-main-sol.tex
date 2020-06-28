@@ -1,0 +1,13 @@
+\begin{answer}
+	Note that
+\[ \frac{\partial f_u}{\partial \alpha}  = u^T(x - \alpha u) = 0 \Leftrightarrow \alpha = u^Tx,\, \text{assuming}\  \|u\|_{2} = 1\]
+Then
+
+\[ \sum_{i = 1}^{m} \|x^{(i)} - (x^{(i)^T} u)u\|^2_{2} = \sum_{i =1}^{m}\left( x^{(i)^T}x^{(i)} - u^Tx^{(i)}x^{(i)^T}u\right) - \sum_{i =1}^{m}x^{(i)^T}x^{(i)} - u^T\left(\sum_{i =1}^{m} x^{(i)}x^{(i)^T}\right)u\]
+So
+$$ \underset{u,u^Tu=1}{\text{minimize}}\sum_{i = 1}^{m} \|x^{(i)} - (x^{(i)^T} u)u\|^2_{2} \Leftrightarrow \underset{u,u^Tu=1}{\text{maximize}} \ u^T\left(\frac{\sum_{i =1}^{m} x^{(i)}x^{(i)^T}}{m}\right)u $$
+This is the same optimization problem of maximizing the sum-variances.
+
+The solution is given by \[ u = \lambda_{max} \left(\frac{\sum_{i =1}^{m} x^{(i)}x^{(i)^T}}{m}\right)\]
+and optimal $ u $ is the principal eigenvector.
+\end{answer}

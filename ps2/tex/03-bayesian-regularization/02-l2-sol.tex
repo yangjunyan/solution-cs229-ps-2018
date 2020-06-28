@@ -1,0 +1,9 @@
+\begin{answer}
+\begin{align*}
+\theta_{\text{MAP}}=&\operatorname*{argmax}_{\theta}p(y|x,\theta)p(\theta)\\
+= &\operatorname*{argmax}_{\theta}p(y|x,\theta)\frac{1}{\sqrt{2\pi}\theta}\exp(-\frac{\|\theta\|^2_{2}}{\eta^2})\\
+= &\operatorname*{argmax}_{\theta}\left( \log(p(y|x,\theta))-\frac{\|\theta\|^2_{2}}{\eta^2}\right) \\
+= &\operatorname*{argmin}_{\theta}\left( -\log(p(y|x,\theta))+\frac{\|\theta\|^2_{2}}{\eta^2}\right)
+\end{align*}
+so here $ \lambda = \frac{1}{\eta^2} $.
+\end{answer}

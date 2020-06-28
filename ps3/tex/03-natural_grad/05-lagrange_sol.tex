@@ -1,0 +1,23 @@
+\begin{answer}
+For convenience we set $ \nabla_{\theta'}f(\theta) $ as $ \nabla_{\theta'}f(\theta')|_{\theta' = \theta} $.
+
+Lagrangian
+\begin{align*}
+ L(\theta, \lambda) = l(\theta) + d^T\nabla_{\theta'}l(\theta) - \lambda(\frac{1}{2}d^T\mathcal{I}(\theta)d - c) 
+ \end{align*}
+ \begin{align}
+ \frac{\partial L}{\partial d} = \nabla_{\theta'}l(\theta) - \lambda\mathcal{I}(\theta)d = 0 \Rightarrow
+ d = \frac{ \mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta)}{\lambda} \\ 
+ \frac{\partial L}{\partial \lambda} = \frac{1}{2}d^T\mathcal{I}(\theta)d - c = 0
+\end{align}
+sub (1) into (2):
+\[ \frac{\nabla_{\theta'}l(\theta)^T\mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta)}{2c} = \lambda^2 \]
+Since we are finding an ascent direction, so $ d^T\nabla_{\theta'}l(\theta) $ should be positive, i.e.  \[ \frac{\nabla_{\theta'}l(\theta)^T\mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta)}{\lambda} > 0  \]
+note that $ \mathcal{I}(\theta) $ is positive defined so the above formula $ \Leftrightarrow \lambda > 0 $
+then
+\[ \lambda = \sqrt{\frac{\nabla_{\theta'}l(\theta)^T\mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta)}{2c}}  \]
+and 
+\[ d = \sqrt{\frac{2c}{\nabla_{\theta'}l(\theta)^T\mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta)}}\mathcal{I}(\theta)^{-1}\nabla_{\theta'}l(\theta) \]
+
+
+ \end{answer}

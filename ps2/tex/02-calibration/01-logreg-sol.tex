@@ -1,0 +1,6 @@
+\begin{answer}
+Since the gradient of $ \theta_{MLE} $ must be zero, set the partial derivative of NLL with respect to $ \theta $ we have
+$  \sum_{i=1}^{m}(y^{(i)}-h_{\theta}(x^{(i)})) = 0  $. Since the first dimension of $ x^{(i)} $ is always 0, consider the first dimension we have
+\[ \sum_{i=1}^{m}y^{(i)}=\sum_{i=1}^{m}h_{\theta}(x^{(i)})=\sum_{i=1}^{m} p(y^{(i)}=1|x^{(i)};\theta)\]
+ which leads to the result.
+\end{answer}

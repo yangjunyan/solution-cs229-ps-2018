@@ -1,0 +1,10 @@
+\begin{answer}
+    Training on dataset A finished with few iterations, while with B it seems like a dead loop.
+    
+    P.S. I think the line \texttt{probs = 1. / (1 + np.exp(margins))} in the \texttt{cal\_grad} function of \texttt{src/p01\_lr.py} cannot be seen as probability (of a conventional Bernoulli distribution) because it is just a metric of margin.
+    
+    In fact if we choose $ \{0,1\} $ to represent label, we can write down the binary Bernoulli distribution $ B(\phi) $ and using GLM method to computer the expression of $ \phi $ as $ \frac{1}{1+\exp{-\theta^Tx}} $ so that this can be regarded as probability of being 1 given sample x.
+    
+    But that line only measure the margin between the point and the decision boundary. It cannot represent the probability of a point being classified as positive. 
+    
+\end{answer}

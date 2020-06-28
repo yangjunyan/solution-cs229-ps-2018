@@ -1,0 +1,10 @@
+\begin{answer}
+Note that 
+\begin{align*}
+\log p(y;\theta+d) - \log p(y;\theta) = \nabla_{\theta'}\log p(y;\theta)d + \frac{1}{2}d^T(\nabla^2_{\theta'}\log p(y;\theta))d + o(\|d\|_{2})
+\end{align*}
+Take expectation of both sides with $ y\sim p(y;\theta) $ we have
+\begin{align*}
+\KL(p_\theta\|p_{\theta+d}) = 0 d + \frac{1}{2}d^T\mathcal{I}(\theta)d + o(\|d\|_{2}) \approx \frac{1}{2}d^T\mathcal{I}(\theta)d
+\end{align*}
+\end{answer}
